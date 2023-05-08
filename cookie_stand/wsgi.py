@@ -1,5 +1,5 @@
 """
-WSGI config for permissions_postgres project.
+WSGI config for cookie_stand project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "permissions_postgres.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "cookie_stand.settings")
 
 application = get_wsgi_application()

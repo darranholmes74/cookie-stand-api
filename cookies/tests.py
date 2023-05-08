@@ -1,6 +1,6 @@
 from django.test import TestCase
 from django.contrib.auth import get_user_model
-from .models import Snacks
+from .models import CookieStand
 
 
 class BlogTests(TestCase):
@@ -10,18 +10,18 @@ class BlogTests(TestCase):
         testuser1 = get_user_model().objects.create_user(username='testuser1', password='pass')
         testuser1.save()
 
-        test_post = Snacks.objects.create(
+        test_post = CookieStand.objects.create(
             owner = testuser1,
             name = 'Green Eggs and Ham',
             description = 'I do not like green eggs and ham, Sam I  am.'
         )
         test_post.save()
 
-    def test_blog_content(self):
-        snacks = Snacks.objects.get(id=1)
-        actual_owner = str(snacks.owner)
-        actual_name = str(snacks.name)
-        actual_description = str(snacks.description)
+    def test_cookie_stand_content(self):
+        cookie = CookieStand.objects.get(id=1)
+        actual_owner = str(cookie.owner)
+        actual_name = str(cookie.name)
+        actual_description = str(cookie.description)
         self.assertEqual(actual_owner, 'testuser1')
         self.assertEqual(actual_name, 'Green Eggs and Ham')
         self.assertEqual(actual_description, 'I do not like green eggs and ham, Sam I  am.')

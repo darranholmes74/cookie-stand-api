@@ -1,8 +1,11 @@
 from rest_framework import serializers
-from .models import Snacks
+from .models import CookieStand
 
 
-class SnacksSerializer(serializers.ModelSerializer):
+class CookieStandSerializer(serializers.ModelSerializer):
     class Meta:
-        fields = ('id', 'owner', 'name', 'description', 'updated_at')
-        model = Snacks
+        fields = (
+            'id', 'location', 'owner', 'description', 'hourly_sales', 'maximum_customers_per_hour',
+            'minimum_customers_per_hour', 'average_cookies_per_sale'
+        )
+        model = CookieStand

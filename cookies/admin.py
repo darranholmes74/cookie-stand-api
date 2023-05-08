@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import Snacks
+from .models import CookieStand
 
-admin.site.register(Snacks)
+admin.site.register(CookieStand)
