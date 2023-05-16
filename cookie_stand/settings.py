@@ -160,7 +160,7 @@ REST_FRAMEWORK = {
 }
 
 
-CORS_ALLOWED_ORIGINS = ['http://localhost:3000', ]
+CORS_ALLOWED_ORIGINS = ['http://localhost:3000', "cookie-stand-api-darran-holmes.vercel.app", ]
 CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOWED_METHODS = ['GET', 'POST', ]
 CORS_ALLOWED_HEADERS = ['X-CSRFToken', 'Content-Type', ]
