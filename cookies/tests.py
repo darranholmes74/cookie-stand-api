@@ -3,7 +3,7 @@ from django.contrib.auth import get_user_model
 from .models import CookieStand
 
 
-class BlogTests(TestCase):
+class CookieStandTests(TestCase):
 
     @classmethod
     def setUpTestData(cls):
