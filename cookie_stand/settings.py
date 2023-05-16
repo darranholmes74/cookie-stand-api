@@ -17,7 +17,8 @@ import environ
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 env = environ.Env(
-    DEBUG=(bool, False)
+    DEBUG=(bool, False),
+    ALLOWED_HOST=(list, [])
 )
 
 environ.Env.read_env()
@@ -33,7 +34,7 @@ DEBUG = env.bool('DEBUG')
 # SECURITY WARNING: don't run with debug turned on in production!
 
 # ALLOWED_HOSTS = tuple([env.list('ALLOWED_HOSTS')])
-ALLOWED_HOSTS = ['0.0.0.0']
+ALLOWED_HOSTS = tuple(env.list("ALLOWED_HOSTS"))
 
 
 # Application definition
