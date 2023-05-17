@@ -2,6 +2,10 @@
 
 ## Author: Darran Holmes
 
+### Deployments
+front-end: cookie-stand-admin-darran-holmes.vercel.app
+back-end: cookie-stand-api-darran-holmes.vercel.app
+
 ### How to initialize/run your application
 
 you will need to run pip install -r requirements.txt
